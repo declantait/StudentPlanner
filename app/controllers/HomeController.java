@@ -1,14 +1,12 @@
 package controllers;
 
 import models.Task;
-import models.SubTask;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
-import repositories.SubTaskRepos;
 import repositories.FolderRepos;
 import repositories.TaskRepos;
 
@@ -32,12 +30,10 @@ public class HomeController extends Controller {
     public HomeController(FormFactory formFactory,
                           TaskRepos taskRepos,
                           FolderRepos folderRepos,
-                          //                    SubTaskRepos subtaskRepos,
                           HttpExecutionContext httpExecutionContext) {
         this.taskRepos = taskRepos;
         this.formFactory = formFactory;
         this.folderRepos = folderRepos;
-        //    this.subtaskRepos = subtaskRepos;
         this.httpExecutionContext = httpExecutionContext;
     }
 
