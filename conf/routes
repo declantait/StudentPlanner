@@ -1,0 +1,24 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Default path will just redirect to the task list
+GET     /                       controllers.HomeController.index()
+
+# Task list (look at the default values for pagination parameters)
+GET     /tasks                  controllers.HomeController.list(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+
+# Add task
+GET     /tasks/new              controllers.HomeController.create()
+POST    /tasks                  controllers.HomeController.save()
+
+# Edit existing task
+GET     /tasks/:id              controllers.HomeController.edit(id:Long)
+POST    /tasks/:id              controllers.HomeController.update(id:Long)
+
+# Delete a task
+POST    /tasks/:id/delete       controllers.HomeController.delete(id:Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file           controllers.Assets.at(path="/public", file)
+

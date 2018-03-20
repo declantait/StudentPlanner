@@ -1,0 +1,4 @@
+# Messages
+tasks.list.title={0,choice,0#No tasks|1#One tasks|1<{0,number,integer} tasks} found
+
+

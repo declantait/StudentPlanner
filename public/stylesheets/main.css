@@ -1,0 +1,83 @@
+html {
+    background: #eee;
+}
+
+header h1 {
+    padding: 0.4em 1.1em;
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.fillHead {
+    background-color: #009688!important;
+}
+
+.topbar a {
+    color: #eeeeee;
+}
+
+section#main {
+    position: relative;
+    padding: 5em 2em;
+    border-bottom: 1px solid #ccc;
+    min-height: 600px;
+} 
+
+section#main .topRight {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+table.tasks em {
+    color: #aaa;
+}
+
+table.tasks .introduced, table.tasks .discontinued {
+    width: 10%;
+    min-width: 100px;
+}
+
+table.tasks .folder_name {
+    width: 30%;
+    min-width: 300px;
+}
+
+table.tasks .header a {
+}
+
+#actions {
+    position: relative;
+}
+
+#actions #add {
+    position: relative;
+    right: 0;
+    top: 0;
+}
+
+#pagination {
+    position: relative;
+}
+
+#pagination ul {
+    position: absolute;
+    right: 0;
+}
+
+#pagination ul .current a {
+    color: #666;
+}
+
+label {
+    font-size: 12px;
+}
+
+#folder_id {
+    font-size: 12px;
+}
+
+.btn.success {
+    margin-bottom: 1.5em;
+}

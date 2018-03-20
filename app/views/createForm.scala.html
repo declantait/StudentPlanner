@@ -1,0 +1,29 @@
+@(taskForm: Form[Task], folders: Map[String, String])
+
+@import helper._
+
+@main {
+
+    <h1>Add task</h1>
+
+    @form(routes.HomeController.save()) {
+
+        <fieldset>
+            @CSRF.formField
+            @inputText(taskForm("name"), '_label -> "Task name ", '_help -> "")
+            @inputText(taskForm("dueDate"), '_label -> "Due date (mm-dd-yyyy) ", '_help -> "")
+
+        @select(
+            taskForm("folder.id"),
+            options(folders),
+            '_label -> "Folder", '_default -> "-- Choose a folder --",
+            '_showConstraints -> false
+        )
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" value="Create this task" class="btn primary"> or
+            <a href="@routes.HomeController.list()" class="btn">Cancel</a>
+        </div>
+    }
+}
